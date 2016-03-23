@@ -7,7 +7,7 @@
         <!--Add-->
         <scene sceneID="hnc-WZ-ogh">
             <objects>
-                <viewController id="0t7-9H-v3f" sceneMemberID="viewController">
+                <viewController id="0t7-9H-v3f" customClass="AddActivityViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aG6-gF-74z"/>
                         <viewControllerLayoutGuide type="bottom" id="Qde-6s-rXr"/>
@@ -26,7 +26,7 @@
         <!--View-->
         <scene sceneID="eK9-DM-kfn">
             <objects>
-                <viewController id="QQh-Xq-uFX" sceneMemberID="viewController">
+                <viewController id="QQh-Xq-uFX" customClass="ViewActivitiesViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="89u-rh-eFb"/>
                         <viewControllerLayoutGuide type="bottom" id="WDH-ad-XAJ"/>
@@ -45,7 +45,7 @@
         <!--Dashboard-->
         <scene sceneID="6FF-dd-yFN">
             <objects>
-                <viewController id="j4S-Vx-nfC" sceneMemberID="viewController">
+                <viewController id="j4S-Vx-nfC" customClass="DashboardViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gyj-hn-usk"/>
                         <viewControllerLayoutGuide type="bottom" id="R2f-lj-fPL"/>
@@ -86,7 +86,7 @@
         <!--Leaderboard-->
         <scene sceneID="t77-0p-SeM">
             <objects>
-                <viewController id="HB9-Pf-yud" sceneMemberID="viewController">
+                <viewController id="HB9-Pf-yud" customClass="LeaderboardViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2wS-MX-HSA"/>
                         <viewControllerLayoutGuide type="bottom" id="pGI-Dh-tZq"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-265" y="1209"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="BIl-T1-9wp">
             <objects>
-                <viewController id="R3A-9I-Q45" sceneMemberID="viewController">
+                <viewController id="R3A-9I-Q45" customClass="MoreViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="koR-op-SP7"/>
                         <viewControllerLayoutGuide type="bottom" id="3rg-pa-jFx"/>
