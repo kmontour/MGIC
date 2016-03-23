@@ -13,6 +13,11 @@
 		956CF8631CA33E9400D2C2CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956CF8621CA33E9400D2C2CC /* Images.xcassets */; };
 		956CF8661CA33E9400D2C2CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956CF8641CA33E9400D2C2CC /* LaunchScreen.xib */; };
 		956CF8721CA33E9400D2C2CC /* PickersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8711CA33E9400D2C2CC /* PickersTests.swift */; };
+		956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */; };
+		956CF87E1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */; };
+		956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */; };
+		956CF8821CA33FB600D2C2CC /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */; };
+		956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8831CA33FC100D2C2CC /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		956CF86B1CA33E9400D2C2CC /* PickersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956CF8701CA33E9400D2C2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956CF8711CA33E9400D2C2CC /* PickersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersTests.swift; sourceTree = "<group>"; };
+		956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
+		956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		956CF8831CA33FC100D2C2CC /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,11 @@
 		956CF8581CA33E9400D2C2CC /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */,
+				956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */,
+				956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */,
+				956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */,
+				956CF8831CA33FC100D2C2CC /* MoreViewController.swift */,
 				956CF85B1CA33E9400D2C2CC /* AppDelegate.swift */,
 				956CF85D1CA33E9400D2C2CC /* ViewController.swift */,
 				956CF85F1CA33E9400D2C2CC /* Main.storyboard */,
@@ -212,7 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */,
+				956CF87E1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift in Sources */,
 				956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */,
+				956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */,
+				956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */,
+				956CF8821CA33FB600D2C2CC /* LeaderboardViewController.swift in Sources */,
 				956CF85C1CA33E9400D2C2CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
