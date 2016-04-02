@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952D80A81CB03F38004BF85A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D80A71CB03F38004BF85A /* LogInViewController.swift */; };
 		956CF85C1CA33E9400D2C2CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF85B1CA33E9400D2C2CC /* AppDelegate.swift */; };
 		956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF85D1CA33E9400D2C2CC /* ViewController.swift */; };
 		956CF8611CA33E9400D2C2CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956CF85F1CA33E9400D2C2CC /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		952D80A71CB03F38004BF85A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		956CF8561CA33E9400D2C2CC /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956CF85A1CA33E9400D2C2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956CF85B1CA33E9400D2C2CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				956CF85B1CA33E9400D2C2CC /* AppDelegate.swift */,
 				956CF85D1CA33E9400D2C2CC /* ViewController.swift */,
 				956CF85F1CA33E9400D2C2CC /* Main.storyboard */,
+				952D80A71CB03F38004BF85A /* LogInViewController.swift */,
 				956CF8621CA33E9400D2C2CC /* Images.xcassets */,
 				956CF8641CA33E9400D2C2CC /* LaunchScreen.xib */,
 				956CF8591CA33E9400D2C2CC /* Supporting Files */,
@@ -171,7 +174,8 @@
 		956CF84E1CA33E9400D2C2CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Kaitlyn Barbara Montour";
 				TargetAttributes = {
 					956CF8551CA33E9400D2C2CC = {
@@ -231,6 +235,7 @@
 				956CF87E1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift in Sources */,
 				956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */,
 				956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */,
+				952D80A81CB03F38004BF85A /* LogInViewController.swift in Sources */,
 				956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */,
 				956CF8821CA33FB600D2C2CC /* LeaderboardViewController.swift in Sources */,
 				956CF85C1CA33E9400D2C2CC /* AppDelegate.swift in Sources */,
@@ -295,6 +300,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -360,6 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pickers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -370,6 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pickers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -388,6 +396,7 @@
 				);
 				INFOPLIST_FILE = PickersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pickers.app/Pickers";
 			};
@@ -403,6 +412,7 @@
 				);
 				INFOPLIST_FILE = PickersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pickers.app/Pickers";
 			};
@@ -427,6 +437,7 @@
 				956CF8771CA33E9400D2C2CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		956CF8781CA33E9400D2C2CC /* Build configuration list for PBXNativeTarget "PickersTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +446,7 @@
 				956CF87A1CA33E9400D2C2CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
