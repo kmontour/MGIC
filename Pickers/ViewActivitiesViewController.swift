@@ -8,17 +8,65 @@
 
 import UIKit
 
-class ViewActivitiesViewController: UIViewController {
+
+
+class ViewActivitiesViewController: UIViewController, CKDemoViewController, CKCalendarViewDataSource {
+
+    var data : NSMutableDictionary
+    
+    required init?(coder aDecoder: NSCoder){
+        data = NSMutableDictionary()
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        
+        self.data = NSMutableDictionary()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //
+        //  Step 0 : Wire up the data source and delegate
+        //
+        
+        self.delegate = self
+        self.dataSource = self
+        
+        //
+        //  Step 1 : Define some events
+        //
+        
+        let title : NSString = NSLocalizedString("Add Swift Demo", comment: "")
+        let date : NSDate = NSDate(day: 9, month: 1, year: 2015)
+        let event : CKCalendarEvent = CKCalendarEvent(title: title as String, andDate: date, andInfo: nil)
+        
+        
+        //
+        //  Step 2 : Add the events to the cache array
+        //
+        
+        self.data[date] = [event]
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        //  MARK: - CKCalendarDataSource
+        //
+        
+        func calendarView(calendarView: CKCalendarView!, eventsForDate date: NSDate!) -> [AnyObject]! {
+            
+            return self.data.objectForKey(date) as! [AnyObject]!
+        }
+        
+        
     }
     
 

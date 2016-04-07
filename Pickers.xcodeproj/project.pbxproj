@@ -19,6 +19,7 @@
 		956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */; };
 		956CF8821CA33FB600D2C2CC /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */; };
 		956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8831CA33FC100D2C2CC /* MoreViewController.swift */; };
+		95F7A36A1CB701D80033A042 /* MBCalendarKit-master-2 in Resources */ = {isa = PBXBuildFile; fileRef = 95F7A3691CB701D80033A042 /* MBCalendarKit-master-2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		956CF8831CA33FC100D2C2CC /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		95F7A3691CB701D80033A042 /* MBCalendarKit-master-2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "MBCalendarKit-master-2"; sourceTree = "<group>"; };
+		95F7A36B1CB7034A0033A042 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		956CF84D1CA33E9400D2C2CC = {
 			isa = PBXGroup;
 			children = (
+				95F7A36B1CB7034A0033A042 /* Header.h */,
 				956CF8581CA33E9400D2C2CC /* Pickers */,
 				956CF86E1CA33E9400D2C2CC /* PickersTests */,
 				956CF8571CA33E9400D2C2CC /* Products */,
@@ -89,6 +93,7 @@
 		956CF8581CA33E9400D2C2CC /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				95F7A3691CB701D80033A042 /* MBCalendarKit-master-2 */,
 				956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */,
 				956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */,
 				956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */,
@@ -214,6 +219,7 @@
 				956CF8611CA33E9400D2C2CC /* Main.storyboard in Resources */,
 				956CF8661CA33E9400D2C2CC /* LaunchScreen.xib in Resources */,
 				956CF8631CA33E9400D2C2CC /* Images.xcassets in Resources */,
+				95F7A36A1CB701D80033A042 /* MBCalendarKit-master-2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Debug;
 		};
@@ -379,6 +386,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Release;
 		};
