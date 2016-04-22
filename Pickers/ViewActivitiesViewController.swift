@@ -9,7 +9,13 @@
 import UIKit
 import CoreData
 
+
+
+
+
 class ViewActivitiesViewController: UIViewController {
+    
+  
     
     let moc = DataController().managedObjectContext
 
@@ -17,7 +23,6 @@ class ViewActivitiesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         
         
         //here's some stuff we tired when experimenting with core data but it crashes :(
@@ -29,6 +34,9 @@ class ViewActivitiesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    //methods we tried that didn't work
     
     func fetch(){
         let activityFetch = NSFetchRequest(entityName: "activity")
