@@ -10,11 +10,11 @@ import UIKit
 
 
 class AddActivityViewController: UIViewController {
-    
+    var selectedActivity: ActivityType = ActivityType.ColdCall
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any addiional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +28,7 @@ class AddActivityViewController: UIViewController {
     @IBAction func ColdCallClicked(sender: AnyObject) {
         
         self.ActivityDescription.text = "Calling someone: 5 points"
+        selectedActivity = ActivityType.ColdCall
     }
     
     @IBAction func Activity2Clicked(sender: AnyObject) {
@@ -79,6 +80,51 @@ class AddActivityViewController: UIViewController {
     
     @IBOutlet weak var AddActivity: UIButton!
 
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    @IBAction func textFieldEditing(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: #selector(AddActivityViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+      
+        
+    }
+
+    
+    @IBAction func AddTapped(sender: AnyObject) {
+        
+       // let newActivity = Activity(date: dateTextField.text!, customerName: CustomerName.text!, notes: Notes.text!, type: selectedActivity)
+        
+        
+        let alertController = UIAlertController(title: "Add Activity", message:
+            "Activity Added!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+     
+    }
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -8,20 +8,22 @@
 
 import Foundation
 
+enum ActivityType{
+    case ColdCall, Lunch, Dinner, Breakfast, Presentation
+}
+
 class Activity{
     
-    enum ActivityType{
-        case ColdCall, Lunch, Dinner, Breakfast, Presentation
-    }
+   
     
     
-    var date: NSDate
+    var date: String = ""
     var customerName: String = ""
     var notes: String = ""
     var type: ActivityType
     
     
-    init(date: NSDate, customerName: String, notes: String, type: ActivityType){
+    init(date: String, customerName: String, notes: String, type: ActivityType){
         self.customerName = customerName
         self.date = date
         self.notes = notes
