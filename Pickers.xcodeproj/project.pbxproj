@@ -16,7 +16,6 @@
 		956CF8661CA33E9400D2C2CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956CF8641CA33E9400D2C2CC /* LaunchScreen.xib */; };
 		956CF8721CA33E9400D2C2CC /* PickersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8711CA33E9400D2C2CC /* PickersTests.swift */; };
 		956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */; };
-		956CF87E1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */; };
 		956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */; };
 		956CF8821CA33FB600D2C2CC /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */; };
 		956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CF8831CA33FC100D2C2CC /* MoreViewController.swift */; };
@@ -25,6 +24,8 @@
 		F70E0D141CC6F56F00912028 /* activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E0D121CC6F56F00912028 /* activity.swift */; };
 		F70E0D161CC6F5F100912028 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E0D151CC6F5F100912028 /* DataController.swift */; };
 		F71E96121CC9AA22002AF11D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E96111CC9AA22002AF11D /* CalendarViewController.swift */; };
+		F76C62451CD163C200DFDBE5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C62441CD163C200DFDBE5 /* Activity.swift */; };
+		F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		956CF8701CA33E9400D2C2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956CF8711CA33E9400D2C2CC /* PickersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersTests.swift; sourceTree = "<group>"; };
 		956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
 		956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		956CF8831CA33FC100D2C2CC /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		F70E0D121CC6F56F00912028 /* activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = activity.swift; sourceTree = "<group>"; };
 		F70E0D151CC6F5F100912028 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		F71E96111CC9AA22002AF11D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F76C62441CD163C200DFDBE5 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */,
-				956CF87D1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift */,
+				F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */,
+				F76C62441CD163C200DFDBE5 /* Activity.swift */,
 				956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */,
 				956CF8811CA33FB600D2C2CC /* LeaderboardViewController.swift */,
 				956CF8831CA33FC100D2C2CC /* MoreViewController.swift */,
@@ -323,9 +326,10 @@
 			files = (
 				F70E0D141CC6F56F00912028 /* activity.swift in Sources */,
 				F70E0D161CC6F5F100912028 /* DataController.swift in Sources */,
+				F76C62451CD163C200DFDBE5 /* Activity.swift in Sources */,
 				956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */,
-				956CF87E1CA33F9A00D2C2CC /* ViewActivitiesViewController.swift in Sources */,
 				F70E0D101CC6F42600912028 /* myCoreDataModel.xcdatamodeld in Sources */,
+				F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */,
 				956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */,
 				956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */,
 				952D80A81CB03F38004BF85A /* LogInViewController.swift in Sources */,
@@ -461,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,6 +6,45 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View-->
+        <scene sceneID="kBZ-16-Shs">
+            <objects>
+                <viewController id="CtQ-tm-TxV" customClass="ViewActivitiesViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TT0-tH-dhF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q1j-0m-sFR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="93l-8R-Eq9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-mq-MKn" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="74" width="600" height="51"/>
+                                <color key="backgroundColor" red="1" green="0.66811635309999995" blue="0.2820319657" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-6L-UYQ" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="163" width="600" height="172"/>
+                                <color key="backgroundColor" red="1" green="0.062842086049999996" blue="0.43858138899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YNy-6L-UYQ" firstAttribute="centerX" secondItem="93l-8R-Eq9" secondAttribute="centerX" id="3IT-ha-SKq"/>
+                            <constraint firstItem="Q1j-0m-sFR" firstAttribute="top" secondItem="YNy-6L-UYQ" secondAttribute="bottom" constant="216" id="csy-9T-AKj"/>
+                            <constraint firstItem="tNZ-mq-MKn" firstAttribute="centerX" secondItem="93l-8R-Eq9" secondAttribute="centerX" id="j7A-9o-lD0"/>
+                            <constraint firstItem="tNZ-mq-MKn" firstAttribute="top" secondItem="TT0-tH-dhF" secondAttribute="bottom" constant="54" id="r5K-AN-kZg"/>
+                            <constraint firstItem="YNy-6L-UYQ" firstAttribute="top" secondItem="tNZ-mq-MKn" secondAttribute="bottom" constant="38" id="xCj-3v-MSP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="View" image="view" selectedImage="view" id="4g0-MP-97s"/>
+                    <connections>
+                        <outlet property="calendarView" destination="YNy-6L-UYQ" id="mbG-vs-diI"/>
+                        <outlet property="menuView" destination="tNZ-mq-MKn" id="R6W-aS-SIG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uu-1d-FYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="724"/>
+        </scene>
         <!--Add-->
         <scene sceneID="hnc-WZ-ogh">
             <objects>
@@ -28,47 +67,74 @@
                                     <constraint firstAttribute="height" constant="96" id="Ktg-AX-JJH"/>
                                     <constraint firstAttribute="width" constant="96" id="PE5-Tb-WeT"/>
                                 </constraints>
-                                <state key="normal" title="1" backgroundImage="add"/>
+                                <state key="normal" title="Cold Call" backgroundImage="add"/>
+                                <connections>
+                                    <action selector="ColdCallClicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="qEH-cw-sty"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyM-ju-Oyq">
                                 <rect key="frame" x="148" y="125" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="Activity2Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="afH-E3-Gg4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMQ-rv-HCE">
                                 <rect key="frame" x="252" y="125" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="Activity3Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="e4u-dY-CYI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JES-gB-ukY">
                                 <rect key="frame" x="356" y="125" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="Activity4Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="gEn-UU-0Mz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrk-Ps-XSy">
                                 <rect key="frame" x="460" y="124" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="Activity5Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="BxP-ll-NaC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8l-H6-Ff9">
                                 <rect key="frame" x="44" y="230" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="Activity6Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="qLl-aG-Ijg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHB-gS-qYX">
                                 <rect key="frame" x="148" y="230" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="Activity7Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="Nhh-54-4H7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-Sj-0Aq">
                                 <rect key="frame" x="252" y="230" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="Activity8Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="Wnh-WU-MsP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-Hv-ycs">
                                 <rect key="frame" x="356" y="230" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="Activity9Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="Tys-Kd-N5j"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-cL-OKP">
                                 <rect key="frame" x="214" y="85" width="163" height="32"/>
@@ -87,6 +153,9 @@
                                 <rect key="frame" x="460" y="230" width="96" height="97"/>
                                 <color key="backgroundColor" red="0.81568627449999997" green="0.2156862745" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="10"/>
+                                <connections>
+                                    <action selector="Activity10Clicked:" destination="0t7-9H-v3f" eventType="touchUpInside" id="rm3-oc-3sB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkz-7u-2RH">
                                 <rect key="frame" x="44" y="68" width="130" height="32"/>
@@ -247,6 +316,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="add" selectedImage="add" id="G45-oH-xPa"/>
+                    <connections>
+                        <outlet property="ActivityDescription" destination="Han-Bw-cwW" id="Enw-Oy-F4G"/>
+                        <outlet property="AddActivity" destination="hJC-Ki-WxZ" id="Vap-3M-wfo"/>
+                        <outlet property="CustomerName" destination="ND6-Fb-Oj5" id="ORM-pH-mSM"/>
+                        <outlet property="Notes" destination="JcS-AC-YVs" id="LV1-Zp-U6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upV-vK-Ckj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -433,14 +508,14 @@
                     <connections>
                         <segue destination="j4S-Vx-nfC" kind="relationship" relationship="viewControllers" id="s4v-Zs-HFd"/>
                         <segue destination="0t7-9H-v3f" kind="relationship" relationship="viewControllers" id="iOO-3Z-S9x"/>
+                        <segue destination="CtQ-tm-TxV" kind="relationship" relationship="viewControllers" id="xH6-8k-tfI"/>
                         <segue destination="HB9-Pf-yud" kind="relationship" relationship="viewControllers" id="HJl-as-ADb"/>
                         <segue destination="R3A-9I-Q45" kind="relationship" relationship="viewControllers" id="TY9-jz-YRq"/>
-                        <segue destination="65E-9w-kOf" kind="relationship" relationship="viewControllers" id="VJj-eY-hWR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2g-SO-Hm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="355"/>
+            <point key="canvasLocation" x="13" y="332"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="t77-0p-SeM">
@@ -557,167 +632,6 @@
             </objects>
             <point key="canvasLocation" x="391" y="1191"/>
         </scene>
-        <!--Calendar Appearance Delegate-->
-        <scene sceneID="zZM-kK-HvZ">
-            <objects>
-                <viewController id="65E-9w-kOf" customClass="ViewActivitiesViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k3B-hp-iG1"/>
-                        <viewControllerLayoutGuide type="bottom" id="xni-iE-m9x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3VP-6k-j6p">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz3-s7-WBd">
-                                <rect key="frame" x="232" y="28" width="136" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXR-yn-3qj" customClass="CVCalendarMenuView" customModule="Pickers" customModuleProvider="target">
-                                <rect key="frame" x="20" y="71" width="560" height="24"/>
-                                <connections>
-                                    <outlet property="menuViewDelegate" destination="65E-9w-kOf" id="F3t-bU-CmQ"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7M-dF-Gwi">
-                                <rect key="frame" x="547" y="23" width="33" height="33"/>
-                                <state key="normal" image="present-100">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="todayMonthView" destination="65E-9w-kOf" eventType="touchUpInside" id="Y17-M0-rh3"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable showing days out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwG-4L-tE4">
-                                <rect key="frame" x="20" y="507" width="224" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94j-Vh-w7h">
-                                <rect key="frame" x="531" y="500" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchChanged:" destination="65E-9w-kOf" eventType="valueChanged" id="PhP-eb-73f"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoe-N2-AiZ">
-                                <rect key="frame" x="260" y="411" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siM-VJ-yfU">
-                                <rect key="frame" x="20" y="25" width="39" height="30"/>
-                                <state key="normal" title="Week">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toWeekView:" destination="65E-9w-kOf" eventType="touchUpInside" id="boV-Kz-o7g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-2H-LPa">
-                                <rect key="frame" x="67" y="25" width="44" height="30"/>
-                                <state key="normal" title="Month">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toMonthView:" destination="65E-9w-kOf" eventType="touchUpInside" id="qeM-In-cKu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFw-Wt-fKA">
-                                <rect key="frame" x="312" y="440" width="30" height="30"/>
-                                <state key="normal" title="&gt;">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadNext:" destination="65E-9w-kOf" eventType="touchUpInside" id="3rh-ry-VkF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIA-Rp-yZb">
-                                <rect key="frame" x="260" y="440" width="30" height="30"/>
-                                <state key="normal" title="&lt;">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadPrevious:" destination="65E-9w-kOf" eventType="touchUpInside" id="AX3-hO-jik"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-zY-t8f">
-                                <rect key="frame" x="479" y="437" width="101" height="30"/>
-                                <state key="normal" title="Refresh Month"/>
-                                <connections>
-                                    <action selector="refreshMonth:" destination="65E-9w-kOf" eventType="touchUpInside" id="e9z-kx-tB7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbu-JK-Nv3">
-                                <rect key="frame" x="20" y="437" width="164" height="30"/>
-                                <state key="normal" title="Remove Circle and Dots"/>
-                                <connections>
-                                    <action selector="removeCircleAndDot:" destination="65E-9w-kOf" eventType="touchUpInside" id="YtI-cV-IPq"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Ud-uE7" customClass="CVCalendarView" customModule="Pickers" customModuleProvider="target">
-                                <rect key="frame" x="20" y="103" width="560" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="R2c-Wk-sSJ">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
-                                    </constraint>
-                                </constraints>
-                                <connections>
-                                    <outlet property="calendarAppearanceDelegate" destination="65E-9w-kOf" id="rSK-zs-iYt"/>
-                                    <outlet property="calendarDelegate" destination="65E-9w-kOf" id="EXW-ts-sMe"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="h8Z-Ud-uE7" firstAttribute="leading" secondItem="rXR-yn-3qj" secondAttribute="leading" id="0MA-vM-vjf"/>
-                            <constraint firstAttribute="bottom" secondItem="lwG-4L-tE4" secondAttribute="bottom" constant="20" symbolic="YES" id="20B-ke-8qX"/>
-                            <constraint firstItem="MIA-Rp-yZb" firstAttribute="leading" secondItem="aoe-N2-AiZ" secondAttribute="leading" id="3Jf-qn-fue"/>
-                            <constraint firstItem="jFw-Wt-fKA" firstAttribute="top" secondItem="aoe-N2-AiZ" secondAttribute="bottom" constant="8" id="6NE-Ox-tCI"/>
-                            <constraint firstItem="rXR-yn-3qj" firstAttribute="top" secondItem="L7M-dF-Gwi" secondAttribute="bottom" constant="15" id="6Ob-S8-bOm"/>
-                            <constraint firstItem="h8Z-Ud-uE7" firstAttribute="trailing" secondItem="rXR-yn-3qj" secondAttribute="trailing" id="7Ga-0K-RgR"/>
-                            <constraint firstItem="uz3-s7-WBd" firstAttribute="top" secondItem="k3B-hp-iG1" secondAttribute="bottom" constant="8" symbolic="YES" id="7Tz-ln-vUx"/>
-                            <constraint firstItem="Gbu-JK-Nv3" firstAttribute="leading" secondItem="3VP-6k-j6p" secondAttribute="leadingMargin" id="EaG-n8-9D6"/>
-                            <constraint firstItem="xni-iE-m9x" firstAttribute="top" secondItem="ZbQ-zY-t8f" secondAttribute="bottom" constant="84" id="Iq4-pP-78T"/>
-                            <constraint firstItem="h8Z-Ud-uE7" firstAttribute="top" secondItem="rXR-yn-3qj" secondAttribute="bottom" constant="8" symbolic="YES" id="JWQ-59-EAh"/>
-                            <constraint firstItem="L7M-dF-Gwi" firstAttribute="top" secondItem="k3B-hp-iG1" secondAttribute="bottom" constant="3" id="Syj-7a-hl0"/>
-                            <constraint firstItem="h8Z-Ud-uE7" firstAttribute="top" secondItem="3VP-6k-j6p" secondAttribute="top" constant="103" id="TMe-HC-48k"/>
-                            <constraint firstItem="L7M-dF-Gwi" firstAttribute="trailing" secondItem="rXR-yn-3qj" secondAttribute="trailing" id="UB6-yE-vGx"/>
-                            <constraint firstItem="xni-iE-m9x" firstAttribute="top" secondItem="Gbu-JK-Nv3" secondAttribute="bottom" constant="84" id="UPW-mh-PcH"/>
-                            <constraint firstItem="siM-VJ-yfU" firstAttribute="top" secondItem="k3B-hp-iG1" secondAttribute="bottom" constant="5" id="Vsg-dg-dVZ"/>
-                            <constraint firstItem="lwG-4L-tE4" firstAttribute="leading" secondItem="h8Z-Ud-uE7" secondAttribute="leading" id="XOG-w0-vfc"/>
-                            <constraint firstItem="94j-Vh-w7h" firstAttribute="bottom" secondItem="lwG-4L-tE4" secondAttribute="bottom" id="YrE-fV-guc"/>
-                            <constraint firstItem="LnI-2H-LPa" firstAttribute="leading" secondItem="siM-VJ-yfU" secondAttribute="trailing" constant="8" id="ZG5-fK-Kvj"/>
-                            <constraint firstItem="jFw-Wt-fKA" firstAttribute="top" secondItem="h8Z-Ud-uE7" secondAttribute="bottom" constant="37" id="ZWG-ir-O7W"/>
-                            <constraint firstItem="h8Z-Ud-uE7" firstAttribute="leading" secondItem="3VP-6k-j6p" secondAttribute="leadingMargin" id="cba-LT-6kp"/>
-                            <constraint firstItem="94j-Vh-w7h" firstAttribute="trailing" secondItem="h8Z-Ud-uE7" secondAttribute="trailing" id="d2y-xl-mxa"/>
-                            <constraint firstItem="aoe-N2-AiZ" firstAttribute="top" secondItem="h8Z-Ud-uE7" secondAttribute="bottom" constant="8" id="dhh-Ir-ecR"/>
-                            <constraint firstItem="siM-VJ-yfU" firstAttribute="leading" secondItem="3VP-6k-j6p" secondAttribute="leadingMargin" id="kMS-EA-Mmp"/>
-                            <constraint firstItem="rXR-yn-3qj" firstAttribute="trailing" secondItem="3VP-6k-j6p" secondAttribute="trailingMargin" id="o1K-WX-uWI"/>
-                            <constraint firstAttribute="centerX" secondItem="aoe-N2-AiZ" secondAttribute="centerX" constant="-0.5" id="qTC-yC-cFQ"/>
-                            <constraint firstItem="MIA-Rp-yZb" firstAttribute="top" secondItem="aoe-N2-AiZ" secondAttribute="bottom" constant="8" id="tuq-NB-4K4"/>
-                            <constraint firstItem="MIA-Rp-yZb" firstAttribute="top" secondItem="h8Z-Ud-uE7" secondAttribute="bottom" constant="37" id="v2K-Iu-gKm"/>
-                            <constraint firstItem="LnI-2H-LPa" firstAttribute="top" secondItem="k3B-hp-iG1" secondAttribute="bottom" constant="5" id="wHm-d9-cQz"/>
-                            <constraint firstItem="jFw-Wt-fKA" firstAttribute="trailing" secondItem="aoe-N2-AiZ" secondAttribute="trailing" id="xfB-1x-T4e"/>
-                            <constraint firstItem="uz3-s7-WBd" firstAttribute="centerX" secondItem="rXR-yn-3qj" secondAttribute="centerX" id="yAH-Pr-Ee7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZbQ-zY-t8f" secondAttribute="trailing" id="yNq-Ug-3RG"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="View" selectedImage="view" id="Z8q-18-0m2"/>
-                    <connections>
-                        <outlet property="calendarView" destination="h8Z-Ud-uE7" id="Xbg-Jk-6NW"/>
-                        <outlet property="daysOutSwitch" destination="94j-Vh-w7h" id="9RT-wS-veZ"/>
-                        <outlet property="menuView" destination="rXR-yn-3qj" id="Nlh-Nk-WLs"/>
-                        <outlet property="monthLabel" destination="uz3-s7-WBd" id="b43-bP-vbd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h6c-zb-6Mq" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1138" y="675"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Loading" width="4608" height="6144"/>
@@ -726,7 +640,6 @@
         <image name="dashboard" width="30" height="29"/>
         <image name="dashboard_header" width="768" height="175"/>
         <image name="leaderboard" width="30" height="30"/>
-        <image name="present-100" width="33" height="33"/>
         <image name="skinnyblue1536" width="768" height="75"/>
         <image name="skinnyyellow1536" width="768" height="75"/>
         <image name="view" width="30" height="30"/>

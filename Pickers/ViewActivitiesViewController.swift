@@ -2,12 +2,13 @@
 //  ViewActivitiesViewController.swift
 //  Pickers
 //
-//  Created by Kaitlyn Barbara Montour on 3/23/16.
-//  Copyright (c) 2016 Kaitlyn Barbara Montour. All rights reserved.
+//  Created by MJ Kim on 4/27/16.
+//  Copyright © 2016 Kaitlyn Barbara Montour. All rights reserved.
 //
 
 import UIKit
-import CoreData
+
+import CVCalendar
 
 
 
@@ -15,19 +16,16 @@ import CoreData
 
 class ViewActivitiesViewController: UIViewController {
     
-  
-    
-    let moc = DataController().managedObjectContext
 
+    @IBOutlet weak var menuView: CVCalendarMenuView!
+    
+    
+    @IBOutlet weak var calendarView: CVCalendarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-        //here's some stuff we tired when experimenting with core data but it crashes :(
-        //seedActivity()
-       // fetch()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,36 +34,17 @@ class ViewActivitiesViewController: UIViewController {
     }
     
     
-    //methods we tried that didn't work
-    
-    func fetch(){
-        let activityFetch = NSFetchRequest(entityName: "activity")
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        do{
-            let fetchedActivity = try moc.executeFetchRequest(activityFetch) as! [activity]
-            print(fetchedActivity.first!.activityType!)
-        } catch {
-            fatalError("oh crap! \(error)")
-        }
+        calendarView.commitCalendarViewUpdate()
+        menuView.commitMenuViewUpdate()
     }
     
-    func seedActivity() {
-        
-        
-        let entity=NSEntityDescription.insertNewObjectForEntityForName("activity", inManagedObjectContext: moc) as! activity
-        
-        entity.setValue("ColdCall", forKey: "activityType")
-        //entity.setValue("Date", forKey: "date")
-        
-        do{
-            try moc.save()
-            
-        }catch {
-            fatalError("Failure to save context: \(error)")
-        }
-    }
     
-
+    // MARK: - CVCalendarViewDelegate & CVCalendarMenuViewDelegate
+    
+  
     /*
     // MARK: - Navigation
 
@@ -76,4 +55,17 @@ class ViewActivitiesViewController: UIViewController {
     }
     */
 
+}
+
+extension ViewActivitiesViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
+    
+    /// Required method to implement!
+    func presentationMode() -> CalendarMode {
+        return .MonthView
+    }
+    
+    /// Required method to implement!
+    func firstWeekday() -> Weekday {
+        return .Sunday
+    }
 }
