@@ -30,6 +30,10 @@ class Activity{
         self.type = type
     }
     
+    func setDate(date : String){
+        self.date = date
+    }
+    
     
     
     

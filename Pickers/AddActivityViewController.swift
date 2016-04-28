@@ -11,6 +11,8 @@ import UIKit
 
 class AddActivityViewController: UIViewController {
     var selectedActivity: ActivityType = ActivityType.ColdCall
+    let newActivity = Activity(date: "", customerName: "",notes: "", type: ActivityType.Breakfast)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -109,7 +111,9 @@ class AddActivityViewController: UIViewController {
     
     @IBAction func AddTapped(sender: AnyObject) {
         
-       // let newActivity = Activity(date: dateTextField.text!, customerName: CustomerName.text!, notes: Notes.text!, type: selectedActivity)
+        if dateTextField.text != nil{
+        newActivity.setDate(dateTextField.text!)
+        }
         
         
         let alertController = UIAlertController(title: "Add Activity", message:
@@ -117,8 +121,14 @@ class AddActivityViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
+        
+        print(newActivity.date)
      
     }
+    
+    
+
+    
     
     
     
