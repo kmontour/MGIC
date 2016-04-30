@@ -11,7 +11,7 @@ import UIKit
 
 class AddActivityViewController: UIViewController {
     var selectedActivity: ActivityType = ActivityType.ColdCall
-    let newActivity = Activity(date: "", customerName: "",notes: "", type: ActivityType.Breakfast)
+    let newActivity = Activity(date: "", customerName: "",notes: "", type: ActivityType.ColdCall)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class AddActivityViewController: UIViewController {
     
     @IBAction func ColdCallClicked(sender: AnyObject) {
         
-        self.ActivityDescription.text = "Calling someone: 5 points"
+        self.ActivityDescription.text = "Cold Call: 1 Point"
         selectedActivity = ActivityType.ColdCall
     }
     
