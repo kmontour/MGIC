@@ -8,24 +8,24 @@
 
 import UIKit
 
-import CVCalendar
-
-
-
+//import CVCalendar
 
 
 class ViewActivitiesViewController: UIViewController {
     
 
-    @IBOutlet weak var menuView: CVCalendarMenuView!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var ActivityLabel: UILabel!
+ //   @IBOutlet weak var menuView: CVCalendarMenuView!
     
     
-    @IBOutlet weak var calendarView: CVCalendarView!
+ //   @IBOutlet weak var calendarView: CVCalendarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,10 +36,35 @@ class ViewActivitiesViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+          loadActivities()
         
-        calendarView.commitCalendarViewUpdate()
-        menuView.commitMenuViewUpdate()
+    //    calendarView.commitCalendarViewUpdate()
+   //     menuView.commitMenuViewUpdate()
     }
+    
+    
+    func loadActivities()  {
+        var i:Int = 0
+        var selectedActivity: Activity
+        var firstAdded: Activity
+        
+        while i < Activity.activities.count {
+            
+            selectedActivity =  Activity.activities[i]
+            
+            
+            self.ActivityLabel.text = "Activity: " + selectedActivity.typeString + ", " + selectedActivity.pointValue.description + " pts, " + selectedActivity.date
+            
+            
+            firstAdded = Activity.activities[0]
+            self.label2.text = "Activity: " + firstAdded.typeString + ", " + firstAdded.pointValue.description + " pts, " + firstAdded.date
+            
+            
+            i += 1
+        }
+    }
+    
+    
     
     
     // MARK: - CVCalendarViewDelegate & CVCalendarMenuViewDelegate
@@ -57,15 +82,15 @@ class ViewActivitiesViewController: UIViewController {
 
 }
 
-extension ViewActivitiesViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
+//extension ViewActivitiesViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     /// Required method to implement!
-    func presentationMode() -> CalendarMode {
-        return .MonthView
-    }
+ //   func presentationMode() -> CalendarMode {
+ //       return .MonthView
+ //   }
     
     /// Required method to implement!
-    func firstWeekday() -> Weekday {
-        return .Sunday
-    }
-}
+  //  func firstWeekday() -> Weekday {
+ //       return .Sunday
+ //   }
+//}

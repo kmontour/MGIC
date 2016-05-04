@@ -10,6 +10,10 @@ import UIKit
 
 
 class AddActivityViewController: UIViewController {
+    
+    
+    
+    
     var selectedActivity: ActivityType = ActivityType.ColdCall
     let newActivity = Activity(date: "", customerName: "",notes: "", type: ActivityType.ColdCall)
     
@@ -34,45 +38,48 @@ class AddActivityViewController: UIViewController {
     }
     
     @IBAction func Activity2Clicked(sender: AnyObject) {
-         self.ActivityDescription.text = "Activity 2: x points"
+         self.ActivityDescription.text = "Appointments: x Points"
+        selectedActivity = ActivityType.Appointment
     }
     
     
     @IBAction func Activity3Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 3: x points"
+        self.ActivityDescription.text = "Customer Breakfast or Lunch: x points"
+        selectedActivity = ActivityType.CustomerBreakfastLunch
     }
     
 
     @IBAction func Activity4Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 4: x points"
+        self.ActivityDescription.text = "Training Session: x points"
+        selectedActivity = ActivityType.TrainingSession
     }
 
 
     @IBAction func Activity5Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 5: x points"
+        self.ActivityDescription.text = "Trade Association Attendance: x points"
+        selectedActivity = ActivityType.TradeAssociationAttendance
     }
 
 
     @IBAction func Activity6Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 6: x points"
+        self.ActivityDescription.text = "Presentation: x points"
+        selectedActivity = ActivityType.Presentation
     }
 
     @IBAction func Activity7Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 7: x points"
+        self.ActivityDescription.text = "Travel With Home Office Personnel: x points"
+        selectedActivity = ActivityType.Travel
     }
     
     @IBAction func Activity8Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 8: x points"
+        self.ActivityDescription.text = "After Hours Entertainment: x points"
+        selectedActivity = ActivityType.AfterHoursEntertainment
     }
     
     @IBAction func Activity9Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 9: x points"
+        self.ActivityDescription.text = "Weekend Entertainment: x points"
+        selectedActivity = ActivityType.WeekendEntertainment
     }
- 
-    @IBAction func Activity10Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Activity 10: x points"
-    }
-    
     
     @IBOutlet weak var CustomerName: UITextField!
     
@@ -104,8 +111,6 @@ class AddActivityViewController: UIViewController {
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
         
         dateTextField.text = dateFormatter.stringFromDate(sender.date)
-      
-        
     }
 
     
@@ -115,6 +120,10 @@ class AddActivityViewController: UIViewController {
         newActivity.setDate(dateTextField.text!)
         }
         
+        newActivity.type = selectedActivity
+        newActivity.getTypeInfo(selectedActivity)
+        Activity.activities.append(newActivity)
+
         
         let alertController = UIAlertController(title: "Add Activity", message:
             "Activity Added!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -123,6 +132,9 @@ class AddActivityViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
         
         print(newActivity.date)
+        print(newActivity.type)
+        print(newActivity.typeString)
+        print(newActivity.pointValue)
      
     }
     

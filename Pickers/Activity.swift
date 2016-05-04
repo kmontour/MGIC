@@ -22,6 +22,9 @@ class Activity{
     var notes: String = ""
     var type: ActivityType
     var typeString: String =  ""
+    var pointValue: integer_t = 0
+    static var activities: [Activity] = []
+
     
     
     init(date: String, customerName: String, notes: String, type: ActivityType){
@@ -30,38 +33,55 @@ class Activity{
         self.notes = notes
         self.type = type
         
-        if type == ActivityType.ColdCall{
-            typeString = "Cold Call"
-        }
-        if type == ActivityType.AfterHoursEntertainment{
-            typeString = "After Hours Entertainment"
-        }
-        if type == ActivityType.CustomerBreakfastLunch{
-            typeString = "Customer Breakfast or Lunch"
-        }
-        if type == ActivityType.Presentation{
-            typeString = "Presentation"
-        }
-        if type == ActivityType.TradeAssociationAttendance{
-            typeString = "Trade Association Attendance"
-        }
-        if type == ActivityType.TrainingSession{
-            typeString = "Training Session"
-        }
-        if type == ActivityType.Travel{
-            typeString = "Travel"
-        }
-        if type == ActivityType.WeekendEntertainment{
-            typeString = "Weekend Entertainment"
-        }
-        if type == ActivityType.Appointment{
-            typeString = "Appointment"
-        }
-    }
+            }
     
     func setDate(date : String){
         self.date = date
     }
+    
+    func getTypeInfo(type: ActivityType) {
+        
+        if type == ActivityType.ColdCall{
+            typeString = "Cold Call"
+            pointValue = 1
+        }
+        if type == ActivityType.AfterHoursEntertainment{
+            typeString = "After Hours Entertainment"
+            pointValue = 3
+        }
+        if type == ActivityType.CustomerBreakfastLunch{
+            typeString = "Customer Breakfast or Lunch"
+            pointValue = 2
+        }
+        if type == ActivityType.Presentation{
+            typeString = "Presentation"
+            pointValue = 3
+        }
+        if type == ActivityType.TradeAssociationAttendance{
+            typeString = "Trade Association Attendance"
+            pointValue = 2
+        }
+        if type == ActivityType.TrainingSession{
+            typeString = "Training Session"
+            pointValue = 2
+        }
+        if type == ActivityType.Travel{
+            typeString = "Travel w/ Home Office Personnel"
+            pointValue = 3
+        }
+        if type == ActivityType.WeekendEntertainment{
+            typeString = "Weekend Entertainment"
+            pointValue = 5
+        }
+        if type == ActivityType.Appointment{
+            typeString = "Appointment"
+            pointValue = 2
+        }
+
+        
+    }
+    
+
     
     
     
