@@ -27,6 +27,7 @@
 		F743ABD31CD2B74E00F4FCE5 /* Charts in Resources */ = {isa = PBXBuildFile; fileRef = F743ABD21CD2B74E00F4FCE5 /* Charts */; };
 		F743ABE31CD2B7E500F4FCE5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */; };
 		F743ABE41CD2B7E500F4FCE5 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7692E7E1CDA918E00342738 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7692E7D1CDA918E00342738 /* User.swift */; };
 		F76C62451CD163C200DFDBE5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C62441CD163C200DFDBE5 /* Activity.swift */; };
 		F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		F71E96111CC9AA22002AF11D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F743ABD21CD2B74E00F4FCE5 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Charts; sourceTree = "<group>"; };
 		F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		F7692E7D1CDA918E00342738 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F76C62441CD163C200DFDBE5 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */,
+				F7692E7D1CDA918E00342738 /* User.swift */,
 				F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */,
 				F76C62441CD163C200DFDBE5 /* Activity.swift */,
 				956CF87F1CA33FA900D2C2CC /* AddActivityViewController.swift */,
@@ -440,6 +443,7 @@
 				F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */,
 				956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */,
 				956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */,
+				F7692E7E1CDA918E00342738 /* User.swift in Sources */,
 				952D80A81CB03F38004BF85A /* LogInViewController.swift in Sources */,
 				F71E96121CC9AA22002AF11D /* CalendarViewController.swift in Sources */,
 				956CF8801CA33FA900D2C2CC /* AddActivityViewController.swift in Sources */,

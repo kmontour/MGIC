@@ -7,8 +7,9 @@
 //
 
 import UIKit
+   class LogInViewController: UIViewController {
+    
 
-class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,27 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var usernameField: UITextField!
 
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
+    
+    @IBAction func logInClicked(sender: AnyObject) {
+        if usernameField.text != nil{
+            User.changeName(usernameField.text!)
+        }
+        if passwordField.text != nil{
+            User.changePassword(passwordField.text!)
+          
+        }
+        print("User: ", User.name,"Password: ", User.password)
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -22,8 +22,8 @@ class Activity{
     var notes: String = ""
     var type: ActivityType
     var typeString: String =  ""
-    var pointValue: integer_t = 0
-    static var activities: [Activity] = []
+    var pointValue: Int = 0
+    static var activities = [Activity]()
 
     
     

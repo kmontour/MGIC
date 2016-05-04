@@ -13,7 +13,8 @@ import UIKit
 
 class ViewActivitiesViewController: UIViewController {
     
-
+    @IBOutlet weak var UserLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var ActivityLabel: UILabel!
  //   @IBOutlet weak var menuView: CVCalendarMenuView!
@@ -36,7 +37,8 @@ class ViewActivitiesViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-          loadActivities()
+        displayUser()
+        loadActivities()
         
     //    calendarView.commitCalendarViewUpdate()
    //     menuView.commitMenuViewUpdate()
@@ -48,20 +50,28 @@ class ViewActivitiesViewController: UIViewController {
         var selectedActivity: Activity
         var firstAdded: Activity
         
-        while i < Activity.activities.count {
+        while i < User.activities.count {
             
-            selectedActivity =  Activity.activities[i]
+            selectedActivity =  User.activities[i]
             
             
             self.ActivityLabel.text = "Activity: " + selectedActivity.typeString + ", " + selectedActivity.pointValue.description + " pts, " + selectedActivity.date
             
             
-            firstAdded = Activity.activities[0]
+            firstAdded = User.activities[0]
             self.label2.text = "Activity: " + firstAdded.typeString + ", " + firstAdded.pointValue.description + " pts, " + firstAdded.date
             
             
             i += 1
+        
         }
+    }
+    
+    func displayUser() {
+         let points:String = User.points.description
+        
+        UserLabel.text = User.name
+        pointsLabel.text = "Points: " + points
     }
     
     

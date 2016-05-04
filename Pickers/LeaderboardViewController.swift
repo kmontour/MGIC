@@ -10,8 +10,10 @@ import UIKit
 
 class LeaderboardViewController: UIViewController {
 
+    @IBOutlet weak var UserNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUserInfo()
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +33,9 @@ class LeaderboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func updateUserInfo() {
+        UserNameLabel.text = User.name
+    }
 
 }

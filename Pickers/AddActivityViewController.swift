@@ -39,46 +39,46 @@ class AddActivityViewController: UIViewController {
     }
     
     @IBAction func Activity2Clicked(sender: AnyObject) {
-         self.ActivityDescription.text = "Appointments: x Points"
+         self.ActivityDescription.text = "Appointments: 2 Points"
         selectedActivity = ActivityType.Appointment
     }
     
     
     @IBAction func Activity3Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Customer Breakfast or Lunch: x points"
+        self.ActivityDescription.text = "Customer Breakfast or Lunch: 2 points"
         selectedActivity = ActivityType.CustomerBreakfastLunch
     }
     
 
     @IBAction func Activity4Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Training Session: x points"
+        self.ActivityDescription.text = "Training Session: 2 points"
         selectedActivity = ActivityType.TrainingSession
     }
 
 
     @IBAction func Activity5Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Trade Association Attendance: x points"
+        self.ActivityDescription.text = "Trade Association Attendance: 2 points"
         selectedActivity = ActivityType.TradeAssociationAttendance
     }
 
 
     @IBAction func Activity6Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Presentation: x points"
+        self.ActivityDescription.text = "Presentation: 3 points"
         selectedActivity = ActivityType.Presentation
     }
 
     @IBAction func Activity7Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Travel With Home Office Personnel: x points"
+        self.ActivityDescription.text = "Travel With Home Office Personnel: 3 points"
         selectedActivity = ActivityType.Travel
     }
     
     @IBAction func Activity8Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "After Hours Entertainment: x points"
+        self.ActivityDescription.text = "After Hours Entertainment: 3 points"
         selectedActivity = ActivityType.AfterHoursEntertainment
     }
     
     @IBAction func Activity9Clicked(sender: AnyObject) {
-        self.ActivityDescription.text = "Weekend Entertainment: x points"
+        self.ActivityDescription.text = "Weekend Entertainment: 5 points"
         selectedActivity = ActivityType.WeekendEntertainment
     }
     
@@ -117,14 +117,12 @@ class AddActivityViewController: UIViewController {
     
     @IBAction func AddTapped(sender: AnyObject) {
         
-        if dateTextField.text != nil{
-        newActivity.setDate(dateTextField.text!)
-        }
         
-        newActivity.type = selectedActivity
-        newActivity.getTypeInfo(selectedActivity)
-        Activity.activities.append(newActivity)
-
+        let createdActivity = createNewActivity()
+        
+        User.activities.append(createdActivity)
+        User.addPoints(createdActivity.pointValue)
+        
         
         let alertController = UIAlertController(title: "Add Activity", message:
             "Activity Added!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -132,22 +130,32 @@ class AddActivityViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
-        print(newActivity.date)
-        print(newActivity.type)
-        print(newActivity.typeString)
-        print(newActivity.pointValue)
-     
+        print(createdActivity.date)
+        print(createdActivity.type)
+        print(createdActivity.typeString)
+        print(createdActivity.pointValue)
+        print("Size of array:")
+        print(User.activities.count)
+        
+        for activity in User.activities {
+            print(activity.typeString)
+        }
+
     }
     
-    
 
+    func createNewActivity() -> Activity {
+        let createdActivity = Activity(date: "", customerName: "",notes: "", type: ActivityType.ColdCall)
+        if dateTextField.text != nil{
+        createdActivity.setDate(dateTextField.text!)
+    }
     
+    createdActivity.type = selectedActivity
+    createdActivity.getTypeInfo(selectedActivity)
     
-    
-    
-    
-    
-    
+    return createdActivity
+    }
+ 
     /*
     // MARK: - Navigation
 
