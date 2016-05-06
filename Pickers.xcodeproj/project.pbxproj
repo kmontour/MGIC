@@ -25,8 +25,6 @@
 		F70E0D161CC6F5F100912028 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E0D151CC6F5F100912028 /* DataController.swift */; };
 		F71E96121CC9AA22002AF11D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E96111CC9AA22002AF11D /* CalendarViewController.swift */; };
 		F743ABD31CD2B74E00F4FCE5 /* Charts in Resources */ = {isa = PBXBuildFile; fileRef = F743ABD21CD2B74E00F4FCE5 /* Charts */; };
-		F743ABE31CD2B7E500F4FCE5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */; };
-		F743ABE41CD2B7E500F4FCE5 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7692E7E1CDA918E00342738 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7692E7D1CDA918E00342738 /* User.swift */; };
 		F76C62451CD163C200DFDBE5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C62441CD163C200DFDBE5 /* Activity.swift */; };
 		F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */; };
@@ -40,41 +38,6 @@
 			remoteGlobalIDString = 956CF8551CA33E9400D2C2CC;
 			remoteInfo = Pickers;
 		};
-		F743ABDB1CD2B7B100F4FCE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		F743ABDD1CD2B7B100F4FCE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		F743ABDF1CD2B7B100F4FCE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
-			remoteInfo = "Charts-OSX";
-		};
-		F743ABE11CD2B7B100F4FCE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		F743ABE51CD2B7E500F4FCE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F743ABE41CD2B7E500F4FCE5 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +78,7 @@
 		F70E0D151CC6F5F100912028 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		F71E96111CC9AA22002AF11D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F743ABD21CD2B74E00F4FCE5 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Charts; sourceTree = "<group>"; };
-		F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		F7692E7D1CDA918E00342738 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F76C62441CD163C200DFDBE5 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +90,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31E57BB242CFFCAD6D7E679D /* Pods.framework in Frameworks */,
-				F743ABE31CD2B7E500F4FCE5 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +114,6 @@
 		956CF84D1CA33E9400D2C2CC = {
 			isa = PBXGroup;
 			children = (
-				F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */,
 				F743ABD21CD2B74E00F4FCE5 /* Charts */,
 				F70E0D111CC6F56F00912028 /* activity+CoreDataProperties.swift */,
 				F70E0D121CC6F56F00912028 /* activity.swift */,
@@ -178,6 +138,7 @@
 		956CF8581CA33E9400D2C2CC /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */,
 				956CF87B1CA33F4A00D2C2CC /* DashboardViewController.swift */,
 				F7692E7D1CDA918E00342738 /* User.swift */,
 				F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */,
@@ -232,17 +193,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F743ABD51CD2B7B100F4FCE5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */,
-				F743ABDE1CD2B7B100F4FCE5 /* Charts.framework */,
-				F743ABE01CD2B7B100F4FCE5 /* Charts.framework */,
-				F743ABE21CD2B7B100F4FCE5 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,7 +211,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F743ABE61CD2B7E500F4FCE5 /* PBXTargetDependency */,
 			);
 			name = Pickers;
 			productName = Pickers;
@@ -316,12 +265,6 @@
 			mainGroup = 956CF84D1CA33E9400D2C2CC;
 			productRefGroup = 956CF8571CA33E9400D2C2CC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F743ABD51CD2B7B100F4FCE5 /* Products */;
-					ProjectRef = F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				956CF8551CA33E9400D2C2CC /* Pickers */,
@@ -329,37 +272,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F743ABDC1CD2B7B100F4FCE5 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = F743ABDB1CD2B7B100F4FCE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F743ABDE1CD2B7B100F4FCE5 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = F743ABDD1CD2B7B100F4FCE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F743ABE01CD2B7B100F4FCE5 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = F743ABDF1CD2B7B100F4FCE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F743ABE21CD2B7B100F4FCE5 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = F743ABE11CD2B7B100F4FCE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		956CF8541CA33E9400D2C2CC /* Resources */ = {
@@ -468,11 +380,6 @@
 			isa = PBXTargetDependency;
 			target = 956CF8551CA33E9400D2C2CC /* Pickers */;
 			targetProxy = 956CF86C1CA33E9400D2C2CC /* PBXContainerItemProxy */;
-		};
-		F743ABE61CD2B7E500F4FCE5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = F743ABE51CD2B7E500F4FCE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
