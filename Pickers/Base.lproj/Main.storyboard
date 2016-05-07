@@ -9,7 +9,6 @@
         <!--View-->
         <scene sceneID="kBZ-16-Shs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uu-1d-FYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="CtQ-tm-TxV" customClass="ViewActivitiesViewController" customModule="Pickers" customModuleProvider="target" sceneMemberID="viewController">
                     <tableViewCell key="view" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RCF-bn-Ciu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
@@ -95,6 +94,7 @@
                         <outlet property="pointsLabel" destination="Ioe-1R-oKb" id="6kd-QG-n6Q"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uu-1d-FYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="713"/>
         </scene>
