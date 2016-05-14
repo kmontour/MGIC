@@ -13,10 +13,13 @@ import UIKit
 
 class ViewActivitiesViewController: UIViewController {
     
+    @IBOutlet var tableView: UITableView!
+    
+    
     @IBOutlet weak var UserLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var label2: UILabel!
-    @IBOutlet weak var ActivityLabel: UILabel!
+   
+    
  //   @IBOutlet weak var menuView: CVCalendarMenuView!
     
     
@@ -24,55 +27,59 @@ class ViewActivitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
-      
+     
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+  
     }
     
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         displayUser()
-        loadActivities()
+        //loadActivities()
         
     //    calendarView.commitCalendarViewUpdate()
    //     menuView.commitMenuViewUpdate()
+ 
+    }
+    override func viewDidAppear(animated: Bool) {
+        
+        self.tableView.reloadData()
+        displayUser()
     }
     
-    
-    func loadActivities()  {
-        var i:Int = 0
-        var selectedActivity: Activity
-        var firstAdded: Activity
-        
-        while i < User.activities.count {
-            
-            selectedActivity =  User.activities[i]
-            
-            
-            self.ActivityLabel.text = "Activity: " + selectedActivity.typeString + ", " + selectedActivity.pointValue.description + " pts, " + selectedActivity.date
-            
-            
-            firstAdded = User.activities[0]
-            self.label2.text = "Activity: " + firstAdded.typeString + ", " + firstAdded.pointValue.description + " pts, " + firstAdded.date
-            
-            
-            i += 1
-        
-        }
-    }
     
     func displayUser() {
          let points:String = User.points.description
         
         UserLabel.text = User.name
         pointsLabel.text = "Points: " + points
+        
     }
+    
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return User.activities.count
+    }
+    
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
+    
+       let newActivity = User.activities[indexPath.row]
+            
+      cell.ActivityDescription.text = newActivity.typeString + ", "
+      + newActivity.pointValue.description + " points " + newActivity.date
+        return cell
+    
+   }
+        
     
     
     

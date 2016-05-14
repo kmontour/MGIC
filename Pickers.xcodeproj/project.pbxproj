@@ -24,6 +24,7 @@
 		F70E0D161CC6F5F100912028 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E0D151CC6F5F100912028 /* DataController.swift */; };
 		F71E96121CC9AA22002AF11D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E96111CC9AA22002AF11D /* CalendarViewController.swift */; };
 		F743ABD31CD2B74E00F4FCE5 /* Charts in Resources */ = {isa = PBXBuildFile; fileRef = F743ABD21CD2B74E00F4FCE5 /* Charts */; };
+		F75909671CE681EE0024B7C4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75909661CE681EE0024B7C4 /* CustomCell.swift */; };
 		F7692E7E1CDA918E00342738 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7692E7D1CDA918E00342738 /* User.swift */; };
 		F76C62451CD163C200DFDBE5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C62441CD163C200DFDBE5 /* Activity.swift */; };
 		F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */; };
@@ -121,6 +122,7 @@
 		F71E96111CC9AA22002AF11D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F743ABD21CD2B74E00F4FCE5 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Charts; sourceTree = "<group>"; };
 		F743ABD41CD2B7B100F4FCE5 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		F75909661CE681EE0024B7C4 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		F7692E7D1CDA918E00342738 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F76C62441CD163C200DFDBE5 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F7BAE66C1CD156860012E056 /* ViewActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				956CF85B1CA33E9400D2C2CC /* AppDelegate.swift */,
 				956CF85D1CA33E9400D2C2CC /* ViewController.swift */,
 				956CF85F1CA33E9400D2C2CC /* Main.storyboard */,
+				F75909661CE681EE0024B7C4 /* CustomCell.swift */,
 				952D80A71CB03F38004BF85A /* LogInViewController.swift */,
 				F71E96111CC9AA22002AF11D /* CalendarViewController.swift */,
 				956CF8621CA33E9400D2C2CC /* Images.xcassets */,
@@ -401,6 +404,7 @@
 				956CF8841CA33FC100D2C2CC /* MoreViewController.swift in Sources */,
 				F70E0D101CC6F42600912028 /* myCoreDataModel.xcdatamodeld in Sources */,
 				F7BAE66D1CD156860012E056 /* ViewActivitiesViewController.swift in Sources */,
+				F75909671CE681EE0024B7C4 /* CustomCell.swift in Sources */,
 				956CF85E1CA33E9400D2C2CC /* ViewController.swift in Sources */,
 				956CF87C1CA33F4A00D2C2CC /* DashboardViewController.swift in Sources */,
 				F7692E7E1CDA918E00342738 /* User.swift in Sources */,
